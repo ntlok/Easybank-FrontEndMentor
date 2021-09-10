@@ -1,0 +1,137 @@
+.footer {
+	width: 100%;
+	padding: 1rem;
+	background-color: $darkBlue;
+
+	
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		
+		@include breakpoints-up(large) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			gap: 5rem;
+			height: 100%;
+
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include breakpoints-up(large) {
+			align-items: stretch;
+			flex-direction: row;
+			flex: 1;
+			gap: 6rem;
+		}
+		
+	}
+
+	&__logo {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		> img {
+			width: 200px;
+			
+		}
+	}
+
+	&__midia {
+		display: flex;
+		margin: 1rem auto;
+		
+
+		.img {
+			cursor: pointer;
+			
+			
+			&:hover svg path {
+				fill: $limeGreen;
+			}
+		}
+
+		svg {
+			path {
+				transition: 200ms;
+			}
+		}
+
+
+		.img:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+ &__links {
+	 display: flex;
+	 flex-direction: column;
+	 max-width: 300px;
+	 padding: 1rem;
+	 
+
+	 @include breakpoints-up(medium) {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+	 }
+ }
+
+ &__link {
+		display: flex;
+		flex-direction: column;
+		max-width: 150px;
+		
+		@include breakpoints-up(large) {
+			&:first-child {
+				margin-right: 20px;
+			}
+		}
+
+		a {
+					
+			text-align: center;
+			padding: .75rem;
+			color: white;
+			transition: 200ms;
+
+			@include breakpoints-up(medium) {
+				text-align: center;
+			}
+
+			&:hover {
+				color: $limeGreen;
+			}
+		}
+ }
+
+ &__button {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 padding-top: 1rem;
+	 
+
+	 @include breakpoints-up(large) {
+	 	align-items: flex-end;
+		padding-top: 0;
+		
+	 }
+
+	.button {
+		width: 190px;
+	}
+	
+	p {
+		margin-top: 20px;
+		text-align: left;
+	}
+ }
+}
